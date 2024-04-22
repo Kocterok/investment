@@ -7,11 +7,12 @@
     </head>
 <body>
     <h1>Ваш протфель</h1>
-    <p>Сумма вашего портфеля: P- {{ total_value }}</p>
+    <p>Сумма вашего портфеля: P= {{ total_value }}</p>
     <ul>
         {% for asset in portfolio %}
             <li>{{ asset.asset.name }} - {{ asset.quantity }}</li>
         {% endfor %}
     </ul>
     <a href="{% url 'add_asset' %}">Добавление актива</a>
+    {% comment %} <a href="{% url 'index' %}">Назад</a> {% endcomment %}
 </html>

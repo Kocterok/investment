@@ -6,11 +6,13 @@
     <title>добавление актива</title>
    </head>
 <body>
-    <h1>Добавление актива</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Добавить</button>
-    </form>
+    <div>
+        <h1>Добавление актива</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
 </body>
 </html>
