@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>протфель</title>
-    </head>
+</head>
 <body>
     <h1>Ваш протфель</h1>
     <p>Сумма вашего портфеля: P= {{ total_value }}</p>
@@ -14,5 +15,15 @@
         {% endfor %}
     </ul>
     <a href="{% url 'add_asset' %}">Добавление актива</a>
-    {% comment %} <a href="{% url 'index' %}">Назад</a> {% endcomment %}
-</html>
+
+    <a href="{% url 'index' %}">Назад</a>
+
+
+{% comment %} <html lang="ru"> 
+<form method="post">
+  {% csrf_token %}
+  <input type="text" name="ticker" placeholder="Ticker">
+  <input type="number" name="quantity" placeholder="Quantity">
+  <input type="number" name="price" placeholder="Price per unit">
+  <button type="submit">Add Asset</button>
+</form>  {% endcomment %}
